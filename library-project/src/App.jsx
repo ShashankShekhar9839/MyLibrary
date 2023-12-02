@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
-     <Card/>
+     <Card type = 'Primary' title = "Good Coding Practices">
+      Try your best to write better and good quality code
+      {/* <img src='https://images.pexels.com/photos/19294997/pexels-photo-19294997/free-photo-of-the-lonely-horse.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/> */}
+      </Card>
     </>
   )
 }
