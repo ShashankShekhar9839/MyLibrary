@@ -17,8 +17,6 @@ Card.PropTypes = {
     type : PropTypes.oneOf(['Primary', 'Secondary', 'Tertiary']), 
     // onclick function for card
     func : PropTypes.func, 
-    // href 
-    href : PropTypes.href,
 } 
 
 const wrapperClassFunction = (type) => {
@@ -39,17 +37,17 @@ const renderTitle = (title) => {
     )
 }
 
-const renderChildren = () => {
-    // if(typeof(children) === 'img') {
-
-    // }
+const renderChildren = (children) => {
+    return (
+        <div className = "children-wrapper">{children}</div>
+    )
 }
 
 function Card (props) { 
-    const {title, type, children} = props;
+    const {title, type, children, func} = props;
     console.log(children)
     return (
-         <div className = {`${wrapperClassFunction(type)}`} > {title && renderTitle(title)}  {children}</div>
+         <div className = {`${wrapperClassFunction(type)}`} onClick={func}  > {title && renderTitle(title)}  { children && renderChildren(children)}</div>
     )
 }
 

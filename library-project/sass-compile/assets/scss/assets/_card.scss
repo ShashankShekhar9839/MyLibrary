@@ -25,6 +25,14 @@
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s linear;
   }
+} 
+
+.children-wrapper {
+  max-width: 95%;
+  max-height:200px ;
+  margin: 0 auto;
+  padding: 5px 2px;
+  overflow: hidden;
 }
